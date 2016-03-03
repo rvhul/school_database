@@ -22,11 +22,14 @@ class StandardsController < ApplicationController
 
   def update
     @standard = Standard.find(params[:id])
-
+    @standard.update_attributes(standard_params)
+    redirect_to standards_path
   end
 
   def destroy
-
+    @standard = Standard.find(params[:id])
+    @standard.destroy!
+    redirect_to standards_path
   end
 
 private

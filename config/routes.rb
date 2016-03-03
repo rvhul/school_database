@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   root 'home#land'
-  resources :standards
+  resources :standards do
+    resources :sections
+  end
   resources :houses
-  # resources :students
+  resources :students
 end

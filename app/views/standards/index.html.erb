@@ -1,6 +1,7 @@
 <h1>Welcome to Standards</h1>
+
 <% @standard.each do |standard| %>
-<%= standard.name %>
+<%= link_to standard.name, root_path %>
 <%= link_to "Delete", standard_path(standard), method: :delete %> | <%= link_to "Edit", edit_standard_path(standard) %><br>
 <% end %>
 <%= link_to "Home", root_path %><br>
