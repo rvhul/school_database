@@ -1,11 +1,11 @@
 class StudentsController < ApplicationController
   def index
     if params[:section_id]
-      @sec = Section.find(params[:section_id])
-      @students = @sec.students.all
+      @section = Section.find(params[:section_id])
+      @students = @section.students.all
     elsif params[:house_id]
-      @sec = House.find(params[:house_id])
-      @students = @sec.students.all
+      @house = House.find(params[:house_id])
+      @students = @house.students.all
     else
       @students = Student.all
     end
@@ -18,9 +18,11 @@ class StudentsController < ApplicationController
   def create
     @student = Student.new(student_params)
     if @student.save
+      flash[:success] = "Successfully added a student."
       redirect_to students_path
     else
-      render new
+      flash[:error] = "Oops! Looks like you forgot to fill in a few fields."
+      render :new
     end
   end
 

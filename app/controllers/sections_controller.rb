@@ -12,9 +12,11 @@ class SectionsController < ApplicationController
   def create
     @section = @standard.sections.new(section_params)
     if @section.save
+      flash[:success] = "Successfully added a section."
       redirect_to standard_sections_path
     else
-      render new
+      flash[:error] = "Oops! Looks like you forgot to add a section name."
+      render :new
     end
   end
 

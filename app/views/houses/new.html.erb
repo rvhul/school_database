@@ -1,4 +1,6 @@
+<h1>Add New House</h1>
 <%= simple_form_for @house do |f| %>
 <%= f.input :name, required: true %>
 <%= f.submit "Add House" %>
 <% end %>
+<%= link_to "Cancel", houses_path %>

@@ -10,9 +10,11 @@ class StandardsController < ApplicationController
   def create
     @standard = Standard.new(standard_params)
     if @standard.save
+      flash[:success] = "Successfully added a standard."
       redirect_to standards_path
     else
-      render new
+      flash[:error] = "Oops! Looks like you forgot to add a standard level."
+      render :new
     end
   end
 
