@@ -1,7 +1,7 @@
 <h1>welcome to my home</h1>
 <% @house.each do |house| %>
 <%= house.name %>
-<%= link_to "delete", house_path(house), method: :delete %> | <%= link_to "update", edit_house_path %><br>
+<%= link_to "Delete", house_path(house), method: :delete %> | <%= link_to "Edit", edit_house_path(house) %><br>
 <% end %>
 <%= link_to "Home", root_path %><br>
 <%= link_to "Add New House", new_house_path %>
