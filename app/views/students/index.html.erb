@@ -1,6 +1,13 @@
-<h1>students yo</h1>
+<h1>Student Details</h1>
 <% @students.each do |student| %>
-<%= student.name %><br>
+<%= student.name %> <%= student.address %> <%= student.fathers_name %><br>
 <%= link_to "Delete", student_path(student), method: :delete %> | <%= link_to "Edit", edit_student_path(student) %><br>
 <% end %>
-<%= link_to "Add New Student", new_student_path %>
+<p>
+The total number of students here is: 
+<%= @students.length %>
+
+</p>
+
+<%= link_to "Add New Student", new_student_path %><br>
+<%= link_to "Home", root_path %>

@@ -1,11 +1,11 @@
 class StudentsController < ApplicationController
   def index
     if params[:section_id]
-      @section = Section.find(params[:section_id])
-      @students = @section.students.all
+      @sec = Section.find(params[:section_id])
+      @students = @sec.students.all
     elsif params[:house_id]
-      @house = House.find(params[:house_id])
-      @students = @house.students.all
+      @sec = House.find(params[:house_id])
+      @students = @sec.students.all
     else
       @students = Student.all
     end
