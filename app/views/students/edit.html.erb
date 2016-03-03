@@ -10,6 +10,6 @@ end_year: Date.today.year - 2, discard_day: false, order: [:day, :month, :year],
 <%= f.input :fathers_name, required: true %>
 <%= f.input :emergency_contact, required: true %>
 <%= f.input :blood_type, required: true %>
-<%= f.submit "Change Details" %>
-<%= link_to "Cancel", :back%>
+<%= f.submit "Change Details", class: "btn btn-default" %>
+<%= link_to "Cancel", :back, class: "btn btn-primary"%>
 <% end %>

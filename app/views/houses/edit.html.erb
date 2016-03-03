@@ -1,6 +1,6 @@
 <h1>update yo name</h1>
 <%= simple_form_for @house do |f| %>
 <%= f.input :name %>
-<%= f.submit "Confirm Changes" %>
+<%= f.submit "Confirm Changes", class: "btn btn-primary" %>
 <% end %>
-<%= link_to "Cancel", :back %>
+<%= link_to "Cancel", :back, class: "btn btn-primary" %>
