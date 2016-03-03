@@ -1,0 +1,15 @@
+<h1>Edit your standard name</h1>
+<%= simple_form_for @student do |f| %>
+<%= f.input :name %>
+<%= f.input :section_id, collection: Section.all, label_method: :display_name, value_method: :id %>
+<%= f.input :house_id, collection: House.all, label_method: :name, value_method: :id %>
+<%= f.input :address, required: true %>
+<%= f.input :gender, required: true %>
+<%= f.input :dob, as: :date, start_year: Date.today.year - 50,
+end_year: Date.today.year - 2, discard_day: false, order: [:day, :month, :year], required: true %>
+<%= f.input :fathers_name, required: true %>
+<%= f.input :emergency_contact, required: true %>
+<%= f.input :blood_type, required: true %>
+<%= f.submit "Change Details" %>
+<%= link_to "Cancel", :back%>
+<% end %>

@@ -1,1 +1,7 @@
 <h1>sections yo</h1>
+<% @sections.each do |section| %>
+<%= link_to section.name, students_path(section_id: section.id)  %>
+<%= link_to "Delete", standard_section_path(@standard, section), method: :delete %> | <%= link_to "Edit", edit_standard_section_path(@standard, section) %><br>
+<% end %>
+<%= link_to "Home", root_path %><br>
+<%= link_to "Add New Section", new_standard_section_path(@standard) %>

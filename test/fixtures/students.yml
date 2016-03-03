@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  section_id: 
+  house_id: 
+  name: MyString
+  address: MyText
+  fathers_name: MyString
+  emergency_contact: 1
+  blood_type: MyString
+  gender: MyString
+  dob: 2016-03-03
+
+two:
+  section_id: 
+  house_id: 
+  name: MyString
+  address: MyText
+  fathers_name: MyString
+  emergency_contact: 1
+  blood_type: MyString
+  gender: MyString
+  dob: 2016-03-03
