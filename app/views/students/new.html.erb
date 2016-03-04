@@ -11,7 +11,7 @@
   <%= f.input :fathers_name, label: "Father's Name", required: true %>
   <%= f.input :emergency_contact, label: "Emergency Contact", required: true %>
   <%= f.input :blood_type, collection: Student::BloodType.all, label_method: :label, label: "Blood Type", value_method: :code, required: true %>
-  <%= f.submit "Add New Student" %>
-  <%= link_to "Cancel", :back%>
+  <%= f.submit "Add New Student", class: "btn btn-primary" %>
+  <%= link_to "Cancel", :back, class: "btn btn-primary"%>
   <% end %>
 </div>
