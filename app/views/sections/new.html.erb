@@ -1,6 +1,8 @@
-<h1>Add new Section</h1>
-<%= simple_form_for [@standard, @section] do |f|%>
-<%= f.input :name, required: true %>
-<%= f.submit "Add New Section", class: "btn btn-default" %>
-<% end %>
-<%= link_to "Cancel", standard_sections_path, class: "btn btn-primary" %>
+<div class="container">
+  <h1>Add new Section</h1>
+  <%= simple_form_for [@standard, @section] do |f|%>
+  <%= f.input :name, required: true %>
+  <%= f.submit "Add New Section", class: "btn btn-default" %>
+  <% end %>
+  <%= link_to "Cancel", standard_sections_path, class: "btn btn-primary" %>
+</div>

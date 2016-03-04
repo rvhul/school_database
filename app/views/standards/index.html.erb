@@ -11,7 +11,7 @@
   <tbody>
     <% @standard.each do |standard| %>
     <tr>
-      <td><%= link_to standard.name, students_path(standard_id: standard.id) %></td>
+      <td><%= link_to standard.name, standard_sections_path(standard_id: standard.id) %></td>
       <td><%= link_to "Edit", edit_standard_path(standard), class: "btn btn-default" %></td>
       <td><%= link_to "Delete", standard_path(standard), class: "btn btn-default", method: :delete, data: {confirm: "Are you sure?"} %></td>
     </tr>

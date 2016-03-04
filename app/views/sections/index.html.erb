@@ -1,7 +1,22 @@
-<h1>sections yo</h1>
-<% @sections.each do |section| %>
-<%= link_to section.name, students_path(section_id: section.id)  %>
-<%= link_to "Delete", standard_section_path(@standard, section), method: :delete, class: "btn btn-default", data: {confirm: "Are you sure?"} %> <%= link_to "Edit", edit_standard_section_path(@standard, section), class: "btn btn-default" %><br>
-<% end %>
-<%= link_to "Home", root_path, class: "btn btn-primary" %><br>
-<%= link_to "Add New Section", new_standard_section_path(@standard), class: "btn btn-primary" %>
+<div class="container">
+  <h1>Sections</h1>
+  <table class="table table-striped table-hover ">
+    <thead>
+      <tr>
+        <th>Section Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @sections.each do |section| %>
+      <tr>
+        <td><%= link_to section.name, students_path(section_id: section.id)  %></td>
+        <td> <%= link_to "Edit", edit_standard_section_path(@standard, section), class: "btn btn-default" %></td>
+        <td><%= link_to "Delete", standard_section_path(@standard, section), method: :delete, class: "btn btn-default", data: {confirm: "Are you sure?"} %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to "Add New Section", new_standard_section_path(@standard), class: "btn btn-primary" %>
+</div>

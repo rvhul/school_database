@@ -3,21 +3,21 @@
   <table class="table table-striped table-hover ">
     <thead>
       <tr>
-        <th><%= @house_id %></th>
-        <th>Column heading</th>
-        <th>Column heading</th>
+        <th>House Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
       </tr>
     </thead>
     <tbody>
       <% @house.each do |house| %>
       <tr>
-        <td><%= house.id %></td>
         <td><%= link_to house.name, students_path(house_id: house.id) %></td>
-        <td><%= link_to "Delete", house_path(house), class: "btn btn-default", method: :delete, data: {confirm: "Are you sure?"} %></td>
         <td><%= link_to "Edit", edit_house_path(house), class: "btn btn-default" %></td>
+        <td><%= link_to "Delete", house_path(house), class: "btn btn-default", method: :delete, data: {confirm: "Are you sure?"} %></td>
       </tr>
       <% end %>
     </tbody>
   </table>
   <%= link_to "Add New House", new_house_path, class: "btn btn-primary" %>
+  <%= link_to "Back", :back, class: "btn btn-primary" %>
 </div>

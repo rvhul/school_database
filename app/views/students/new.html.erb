@@ -1,5 +1,6 @@
-<h1>Add new Student</h1>
-<%= simple_form_for @student do |f|%>
+<div class="container">
+  <h1>Add new Student</h1>
+  <%= simple_form_for @student do |f|%>
   <%= f.input :name, required: true %>
   <%= f.input :section_id, collection: Section.all, label_method: :display_name, value_method: :id %>
   <%= f.input :house_id, collection: House.all, label_method: :name, value_method: :id %>
@@ -12,4 +13,5 @@
   <%= f.input :blood_type, required: true %>
   <%= f.submit "Add New Student" %>
   <%= link_to "Cancel", :back%>
-<% end %>
+  <% end %>
+</div>

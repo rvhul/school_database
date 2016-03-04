@@ -1,17 +1,7 @@
 
 <div class="container">
-  <h1>
-    Students belonging to <%= @section ? @section.display_name : @house.name %>
-  </h1>
-  <p>
-    <% if @students.length > 0 %>
-    The total number of students in <%= @section ? @section.display_name : @house.name %> is
-    <%= @students.length %>
-    <% else %>
-    There are no students in <%= @section ? @section.display_name : @house.name %>
-    <% end %>
-  </p>
-  <h1>Standards</h1>
+
+  <h1>Students</h1>
   <table class="table table-striped table-hover ">
     <thead>
       <tr>
@@ -20,8 +10,8 @@
         <th>Address</th>
         <th>Gender</th>
         <th>Father's Name</th>
-        <th>Emergency contact</th>
-        <th>Date of Birth</th>
+        <th>Emergency Contact</th>
+        <th>D.O.B</th>
         <th>Blood Type</th>
         <th>Section_ID</th>
         <th>House_ID</th>
@@ -46,5 +36,6 @@
       <% end %>
     </tbody>
   </table>
-  <%= link_to "Add New Student", new_student_path, class: "btn btn-primary" %><br>
+  <%= link_to "Add New Student", new_student_path, class: "btn btn-primary" if controller == 'Students' && action == 'index' %>
+  <%= link_to "Back", :back, class: "btn btn-primary" %>
 </div>

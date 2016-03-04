@@ -5,7 +5,7 @@ class Section < ActiveRecord::Base
   validates(:name, presence: true)
 
   def display_name
-    "Section #{self.name} of #{self.standard.name} Standard"
+    "#{standard.name} - #{self.name}"
   end
 
 end
