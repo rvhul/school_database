@@ -2,7 +2,7 @@
   <h1>Add New House</h1>
   <%= simple_form_for @house do |f| %>
   <%= f.input :name, required: true %>
-  <%= f.submit "Add House", class: "btn btn-default" %>
+  <%= f.submit "Add House", class: "btn btn-primary" %>
+  <%= link_to "Cancel", houses_path, class: "btn btn-primary" %>
   <% end %>
-  <%= link_to "Cancel", houses_path, class: "btn btn-primary" %>  
 </div>

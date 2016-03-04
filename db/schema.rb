@@ -38,11 +38,11 @@ ActiveRecord::Schema.define(version: 20160303182302) do
     t.integer  "section_id"
     t.integer  "house_id"
     t.string   "name"
-    t.string   "gender"
+    t.integer  "gender"
     t.date     "dob"
     t.text     "address"
     t.string   "fathers_name"
-    t.string   "blood_type"
+    t.integer  "blood_type"
     t.integer  "emergency_contact", limit: 10
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false

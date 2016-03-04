@@ -1,6 +1,8 @@
-<h1>Add new Standard</h1>
-<%= simple_form_for @standard do |f|%>
-<%= f.input :name, required: true %>
-<%= f.submit "Add New Standard", class: "btn btn-primary" %>
-<%= link_to "Cancel", standards_path, class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+  <h1>Add New Standard</h1>
+  <%= simple_form_for @standard do |f|%>
+  <%= f.input :name, required: true %>
+  <%= f.submit "Add New Standard", class: "btn btn-primary" %>
+  <%= link_to "Cancel", standards_path, class: "btn btn-primary" %>
+  <% end %>
+</div>

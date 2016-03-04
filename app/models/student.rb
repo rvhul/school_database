@@ -12,4 +12,42 @@ class Student < ActiveRecord::Base
   validates(:emergency_contact, presence: true)
   validates(:blood_type, presence: true)
 
+
+module Gender
+  MALE = 1
+  FEMALE = 2
+
+  def self.all
+    [
+      OpenStruct.new(code: MALE, label: "Male"),
+      OpenStruct.new(code: FEMALE, label: "Female")
+    ]
+  end
+end
+
+module BloodType
+  O_PLUS = 1
+  O_NEG = 2
+  A_PLUS = 3
+  A_NEG = 4
+  B_PLUS = 5
+  B_NEG = 6
+  AB_PLUS = 7
+  AB_NEG = 8
+
+  def self.all
+    [
+      OpenStruct.new(code: O_PLUS, label: "O+"),
+      OpenStruct.new(code: O_NEG, label: "O-"),
+      OpenStruct.new(code: A_PLUS, label: "A+"),
+      OpenStruct.new(code: A_NEG, label: "A-"),
+      OpenStruct.new(code: B_PLUS, label: "B+"),
+      OpenStruct.new(code: B_NEG, label: "B-"),
+      OpenStruct.new(code: AB_PLUS, label: "AB+"),
+      OpenStruct.new(code: AB_NEG, label: "AB-")
+    ]
+  end
+end
+
+
 end

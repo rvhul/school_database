@@ -11,10 +11,10 @@
         <th>Gender</th>
         <th>Father's Name</th>
         <th>Emergency Contact</th>
-        <th>D.O.B</th>
+        <th>Date of Birth</th>
         <th>Blood Type</th>
-        <th>Section_ID</th>
-        <th>House_ID</th>
+        <th>Section Name</th>
+        <th>House Name</th>
       </tr>
     </thead>
     <tbody>
@@ -36,6 +36,9 @@
       <% end %>
     </tbody>
   </table>
-  <%= link_to "Add New Student", new_student_path, class: "btn btn-primary" if controller == 'Students' && action == 'index' %>
-  <%= link_to "Back", :back, class: "btn btn-primary" %>
+  <% if params[:section_id] || params[:house_id] %>
+    <%= link_to "Back", :back, class: "btn btn-primary" %>
+  <% else %>
+    <%= link_to "Add New Student", new_student_path, class: "btn btn-primary" %>
+  <% end %>
 </div>
