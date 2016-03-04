@@ -1,4 +1,5 @@
-# School Database Management System - CodeTillYouErode
+# School Database Management System
+## CodeTillYouErode
 [logo]: http://i.imgur.com/a9L7AZj.png
 ![alt text][logo]
 ###### Built on Ruby On Rails
