@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem "animate-rails"
 gem 'simple_form'
 gem 'bootstrap-sass'
+gem "font-awesome-rails"
 gem 'bootswatch-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
