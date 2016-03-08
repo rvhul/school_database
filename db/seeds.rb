@@ -65,7 +65,7 @@ end
 puts "#Seeding Students"
   Section.all.each do |section|
     all_houses = House.all
-    (1..(1+rand(6))).each do |num|
+    (1..(20+rand(6))).each do |num|
       house = all_houses.sample
       seed_students(section, house, num)
     end
