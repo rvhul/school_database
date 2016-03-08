@@ -13,6 +13,7 @@ gem 'bootstrap-sass'
 gem "font-awesome-rails"
 gem 'bootswatch-rails'
 gem 'jbuilder', '~> 2.0'
+gem 'faker'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do

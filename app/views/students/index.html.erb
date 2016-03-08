@@ -18,7 +18,7 @@
     <tbody>
       <% @students.each do |student| %>
       <tr>
-        <td><%= student.id %></td>
+        <td><%= student.roll_no %></td>
         <td><%= student.name %></td>
         <td><%= student.address %></td>
         <td><%= student.gender %></td>
@@ -35,6 +35,7 @@
     </tbody>
   </table>
   <% if params[:section_id] || params[:house_id] %>
+    <%= link_to "Add New Student", new_student_path, class: "btn btn-primary" %>
     <%= link_to "Back", :back, class: "btn btn-primary" %>
   <% else %>
     <%= link_to "Add New Student", new_student_path, class: "btn btn-primary" %>
