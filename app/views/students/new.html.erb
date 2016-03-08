@@ -1,12 +1,12 @@
 <div class="container">
-  <h1>Add new Student</h1>
+  <h1>Add New Student</h1>
   <%= simple_form_for @student do |f|%>
   <%= f.input :name, required: true %>
   <%= f.input :section_id, collection: Section.all, label_method: :display_name, value_method: :id %>
   <%= f.input :house_id, collection: House.all, label_method: :name, value_method: :id %>
   <%= f.input :address, required: true %>
   <%= f.input :gender, collection: Student::Gender.all, label_method: :label, value_method: :code, required: true %>
-  <%= f.input :dob, as: :date, start_year: Date.today.year - 50,
+  <%= f.input :dob, as: :date, html5: true, start_year: Date.today.year - 50,
   end_year: Date.today.year - 2, discard_day: false, order: [:day, :month, :year], label: "Date of Birth", required: true %>
   <%= f.input :fathers_name, label: "Father's Name", required: true %>
   <%= f.input :emergency_contact, label: "Emergency Contact", required: true %>
