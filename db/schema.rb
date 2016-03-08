@@ -43,9 +43,9 @@ ActiveRecord::Schema.define(version: 20160303182302) do
     t.text     "address"
     t.string   "fathers_name"
     t.integer  "blood_type"
-    t.integer  "emergency_contact", limit: 10
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.integer  "emergency_contact"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   add_index "students", ["house_id"], name: "index_students_on_house_id"
