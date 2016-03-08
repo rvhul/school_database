@@ -7,7 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'rubygems'
 require 'faker'
-require 'byebug'
 
 def seed_standards(name)
   Standard.find_or_create_by(name: name)
