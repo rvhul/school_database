@@ -2,6 +2,7 @@ class Student < ActiveRecord::Base
   belongs_to :section
   belongs_to :house
 
+  validates(:roll_no, presence: true)
   validates(:name, presence: true)
   validates(:address, presence: true)
   validates(:house_id, presence: true)
